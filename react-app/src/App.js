@@ -14,11 +14,12 @@ import UsestateHook from './What_Is_React/UsestateHook';
 import ListAndRendering from './What_Is_React/ListAndRendering';
 import ReactUpdatesUI from './Why_Learning_React/UpdatesUIAutomatically/ReactUpdatesUI';
 import ReusableComponent from './Why_Learning_React/ReusableUIComponents/ReusableComponent';
+import HelloWorld from './Just_React_Hello_World/HelloWorld';
 
 function App() {
   return (
     <div>
-      <ReusableComponent />
+      <HelloWorld />
     </div>
   );
 }
