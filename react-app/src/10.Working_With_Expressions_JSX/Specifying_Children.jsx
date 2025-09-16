@@ -38,7 +38,7 @@ function card(props) {
     return (
         <div className = "card">
             {props.Children}
-            
+
         </div>
     )
 }
@@ -50,6 +50,24 @@ function App() {
                 <h1>React Card</h1>
                 <p>This is paragraph</p>
             </card>
+        </div>
+    )
+}
+
+
+Children as Expressions
+map() output as children
+
+function App() {
+
+    const items = [banana, apple, mango]
+    return (
+        <div>
+            <ul>
+                {items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
         </div>
     )
 }

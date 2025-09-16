@@ -1,0 +1,58 @@
+// Before JSX, react apps were built using React.createElement.It's a core method that
+// creates a React object(a plain JS object).
+
+// React.createElement(type, props, ...children)
+
+// type - html tag(h1) or component(App)
+// props - properties or attributes (E.g. classname = 'title')
+// children - inner content (text or other elements)
+
+// E.g.
+import React from "react";
+import ReactDOM from "reactDOM/client";
+
+const element = React.createElement("h1", null, "Pathik")
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(element);
+
+
+// Output - Pathik
+
+
+// // E.g. working with props
+
+// const element = React.createElement("h1", {classname : "title", style : {color : "blue"}},
+// "Hello");
+
+// root.render(element);
+
+// // Output : Blue clor coded with class as "title"
+
+
+// // E.g. nesting of elements
+
+// const element = React.createElement("div", {classname : "container"}, 
+// React.createElement("h1", null, "Welcome to React"),
+// React.createElement("p", null, "This is without JSX"));
+
+// root.render(element);
+
+// Output : Welcome to React
+//         This is without JSX 
+
+// Above React.createElement is equivalent to JSX:
+
+// const element = (
+//     <div classname = "container">
+//     <h1>Welcome to React</h1>
+//     <p>This is without JSX</p>
+//     </div>
+// )
+
+// Above both render same UI. But, JSX makes it easier and smaller.
+
+// JSX compiles to React.createElement internally.
+// E.g. <h1>Hello</h1>
+// compiles to
+// React.createElement("h1",null,"Hello")
